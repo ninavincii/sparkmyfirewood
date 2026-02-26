@@ -47,33 +47,22 @@
             margin-bottom: 40px;
         }
 
-        .faq-item {
+        details {
             background: white;
             margin-bottom: 15px;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
+            padding: 15px 20px;
         }
 
-        .faq-question {
-            padding: 18px;
-            cursor: pointer;
+        summary {
             font-weight: bold;
-            background-color: #e8dfd3;
-            border: none;
-            width: 100%;
-            text-align: left;
+            cursor: pointer;
             font-size: 16px;
         }
 
-        .faq-question:hover {
-            background-color: #d9cfc2;
-        }
-
-        .faq-answer {
-            padding: 18px;
-            display: none;
-            border-top: 1px solid #ddd;
+        details p {
+            margin-top: 10px;
         }
 
         footer {
@@ -82,12 +71,6 @@
             text-align: center;
             padding: 15px;
             margin-top: 50px;
-        }
-
-        @media (max-width: 600px) {
-            .faq-container {
-                margin: 30px auto;
-            }
         }
     </style>
 </head>
@@ -107,60 +90,31 @@
 <div class="faq-container">
     <h2>Frequently Asked Questions 🔥</h2>
 
-    <div class="faq-item">
-        <button class="faq-question">Is your firewood properly seasoned?</button>
-        <div class="faq-answer">
-            Yes, all our firewood is fully seasoned and ready to burn for maximum heat and minimal smoke.
-        </div>
-    </div>
+    <details>
+        <summary>Is your firewood properly seasoned?</summary>
+        <p>Yes, all our firewood is fully seasoned and ready to burn for maximum heat and minimal smoke.</p>
+    </details>
 
-    <div class="faq-item">
-        <button class="faq-question">Do you offer delivery?</button>
-        <div class="faq-answer">
-            Yes, we offer reliable local delivery. Contact us to confirm delivery areas and fees.
-        </div>
-    </div>
+    <details>
+        <summary>Do you offer delivery?</summary>
+        <p>Yes, we offer reliable local delivery. Contact us to confirm delivery areas and fees.</p>
+    </details>
 
-    <div class="faq-item">
-        <button class="faq-question">What types of firewood do you sell?</button>
-        <div class="faq-answer">
-            We sell Ironbark mix, double split pizza cut wood, kindling, and full logs.
-        </div>
-    </div>
+    <details>
+        <summary>What types of firewood do you sell?</summary>
+        <p>We sell Ironbark mix, double split pizza cut wood, kindling, and full logs.</p>
+    </details>
 
-    <div class="faq-item">
-        <button class="faq-question">What payment methods do you accept?</button>
-        <div class="faq-answer">
-            We accept cash, bank transfer, and card payments.
-        </div>
-    </div>
+    <details>
+        <summary>What payment methods do you accept?</summary>
+        <p>We accept cash, bank transfer, and card payments.</p>
+    </details>
 
 </div>
 
 <footer>
     <p>© 2026 Spark my Fire(wood) | All Rights Reserved</p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const questions = document.querySelectorAll(".faq-question");
-
-    questions.forEach(question => {
-        question.addEventListener("click", function () {
-
-            const answer = this.nextElementSibling;
-
-            document.querySelectorAll(".faq-answer").forEach(item => {
-                if (item !== answer) {
-                    item.classList.remove("active");
-                }
-            });
-
-            answer.classList.toggle("active");
-        });
-    });
-});
-</script>
 
 </body>
 </html>
