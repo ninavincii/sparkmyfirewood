@@ -4,7 +4,7 @@
 Premium firewood supplier providing high-quality seasoned firewood for homes, pizza ovens, and commercial use.
 
 🌐 Live Website: https://ninavincii.github.io/sparkmyfirewood/
-📞 Contact: 0401830455  
+📞 Contact no.: 0401830455  
 
 ---
 
