@@ -142,22 +142,24 @@
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
     const questions = document.querySelectorAll(".faq-question");
 
     questions.forEach(question => {
-        question.addEventListener("click", () => {
-            const answer = question.nextElementSibling;
+        question.addEventListener("click", function () {
 
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-            } else {
-                document.querySelectorAll(".faq-answer").forEach(item => {
-                    item.style.display = "none";
-                });
-                answer.style.display = "block";
-            }
+            const answer = this.nextElementSibling;
+
+            document.querySelectorAll(".faq-answer").forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove("active");
+                }
+            });
+
+            answer.classList.toggle("active");
         });
     });
+});
 </script>
 
 </body>
