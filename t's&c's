@@ -6,10 +6,11 @@
 <body>
     <h1>Terms & Conditions</h1>
 
-    <p>All sales are subject to availability.</p>
-    <p>Delivery times may vary depending on demand and location.</p>
-    <p>Payment must be made before or upon delivery unless otherwise arranged.</p>
+    <p>All sales subject to availability.</p>
+    <p>Delivery times may vary depending on demand.</p>
+    <p>Payment required before or upon delivery unless otherwise arranged.</p>
 
+    <br>
     <a href="index.html">Back to Home</a>
 </body>
 </html>
